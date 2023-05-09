@@ -57,10 +57,8 @@ Custom Events:
 ### `member`
 Triggered every time a new viewer joins the live stream.
 
-```javascript
-tiktokLiveConnection.on('member', data => {
-    console.log(`${data.uniqueId} joins the stream!`);
-})
+```
+member\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -122,10 +120,8 @@ tiktokLiveConnection.on('member', data => {
 ### `chat`
 Triggered every time a new chat comment arrives.
 
-```javascript
-tiktokLiveConnection.on('chat', data => {
-    console.log(`${data.uniqueId} writes: ${data.comment}`);
-})
+```
+chat\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -191,15 +187,7 @@ Triggered every time a gift arrives. You will receive additional information via
 
 
 ```javascript
-tiktokLiveConnection.on('gift', data => {
-    if (data.giftType === 1 && !data.repeatEnd) {
-        // Streak in progress => show only temporary
-        console.log(`${data.uniqueId} is sending gift ${data.giftName} x${data.repeatCount}`);
-    } else {
-        // Streak ended or non-streakable gift => process the gift with final repeat_count
-        console.log(`${data.uniqueId} has sent gift ${data.giftName} x${data.repeatCount}`);
-    }
-})
+gift\0{data}
 ```
 
 
