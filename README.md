@@ -181,7 +181,6 @@ chat\0{data}
 <br>
 
 ### `gift`
-Triggered every time a gift arrives. You will receive additional information via the `extendedGiftInfo` attribute when you enable the [`enableExtendedGiftInfo`](#params-and-options) option. 
 
 > **NOTE:** Users have the capability to send gifts in a streak. This increases the `repeatCount` value until the user terminates the streak. During this time new gift events are triggered again and again with an increased `repeatCount` value. It should be noted that after the end of the streak, another gift event is triggered, which signals the end of the streak via `repeatEnd`:`true`. This applies only to gifts with `giftType`:`1`. This means that even if the user sends a `giftType`:`1` gift only once, you will receive the event twice. Once with `repeatEnd`:`false` and once with `repeatEnd`:`true`. Therefore, the event should be handled as follows:
 
