@@ -5,9 +5,28 @@
 接口已启动
 ```
 
-2. Create your first chat connection
+2. Create your first chat connection：Use websocket to connect to local port 3000, for example: 127.0.0.1:3000, and send "platform code@live room number"
 ```
-Use websocket to connect to local port 3000, for example: 127.0.0.1:3000
+Unity c# code example：
+
+this.socketIo = new WebSocket("ws://127.0.0.1:3000", Array.Empty<string>());
+		this.socketIo.OnMessage += delegate(object o, MessageEventArgs e)
+		{
+			//TODO
+		};
+		this.socketIo.OnError += delegate(object sender, ErrorEventArgs e)
+		{
+			Debug.Log(levelName+ "： socket Error: " + e.Message.ToString());
+		};
+		this.socketIo.Connect();
+		this.socketIo.Send("{platform code}@{live room code}"); //eg:Shanggu@maizi869
+```
+
+3. parsing message
+
+```
+message的格式为："{event}\0{data}"
+eg:
 ```
 
 ## Events
