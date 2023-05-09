@@ -1,16 +1,6 @@
 
 ## Events
 
-A `WebcastPushConnection` object has the following events which can be handled via `.on(eventName, eventHandler)`
-
-Control Events:
-- [connected](#connected)
-- [disconnected](#disconnected)
-- [streamEnd](#streamend)
-- [rawData](#rawdata)
-- [websocketConnected](#websocketconnected)
-- [error](#error)
-
 Message Events:
 - [member](#member)
 - [chat](#chat)
