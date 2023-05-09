@@ -25,7 +25,7 @@ this.socketIo = new WebSocket("ws://127.0.0.1:3000", Array.Empty<string>());
 3. parsing message
 
 ```
-message的格式为："{event}\0{data}"
+The format of the message is："{event}\0{data}", The "\0" in C# is "char[1]"
 eg: chat {"comment":"6","userId":"6506646277295882242","secUid":"MS4wLjABAAAA6072z27Df6gadz_jKprf5Ozi8H0U6l5etANktpImf2tQ7KDl6HCesEe6-9PEhgNP","uniqueId":"gu12246","nickname":"Shîñ","profilePictureUrl":"https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/388b20bd690fec33398dab2944751312~c5_100x100.webp?x-expires=1683817200&x-signature=kvpbch5FNMbQjmdjUk8wWJSrnmg%3D","followRole":1,"userBadges":[{"type":"image","badgeSceneType":6,"displayType":1,"url":"https://p19-webcast.tiktokcdn.com/webcast-sg/new_top_gifter_version_2.png~tplv-obj.image"}],"userDetails":{"createTime":"0","bioDescription":"","profilePictureUrls":["https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/388b20bd690fec33398dab2944751312~tplv-tiktok-shrink:72:72.webp?x-expires=1683817200&x-signature=GYAPGZwly9d9BhINmlpGXF6ugUA%3D","https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/388b20bd690fec33398dab2944751312~c5_100x100.webp?x-expires=1683817200&x-signature=kvpbch5FNMbQjmdjUk8wWJSrnmg%3D","https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/388b20bd690fec33398dab2944751312~c5_100x100.jpeg?x-expires=1683817200&x-signature=nVYCv%2Bpm6svGqtAGn7glD6VUgNA%3D"]},"followInfo":{"followingCount":888,"followerCount":803,"followStatus":1,"pushStatus":0},"isModerator":false,"isNewGifter":false,"isSubscriber":false,"topGifterRank":null,"msgId":"7231207847282658053","createTime":"1683646785594"}
 ```
 
