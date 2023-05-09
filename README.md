@@ -1,3 +1,14 @@
+## Getting started
+
+1. open app_V2.exe
+```
+接口已启动
+```
+
+2. Create your first chat connection
+```
+Use websocket to connect to local port 3000, for example: 127.0.0.1:3000
+```
 
 ## Events
 
