@@ -273,9 +273,7 @@ gift\0{data}
 Triggered every time a statistic message arrives. This message currently contains the viewer count and a top gifter list.
 
 ```javascript
-tiktokLiveConnection.on('roomUser', data => {
-    console.log(`Viewer Count: ${data.viewerCount}`);
-})
+roomUser\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -448,9 +446,7 @@ tiktokLiveConnection.on('roomUser', data => {
 Triggered when a viewer sends likes to the streamer. For streams with many viewers, this event is not always triggered by TikTok.
 
 ```javascript
-tiktokLiveConnection.on('like', data => {
-    console.log(`${data.uniqueId} sent ${data.likeCount} likes, total likes: ${data.totalLikeCount}`);
-})
+like\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -514,9 +510,7 @@ tiktokLiveConnection.on('like', data => {
 Triggered every time someone shares the stream or follows the host.
 
 ```javascript
-tiktokLiveConnection.on('social', data => {
-    console.log('social event data:', data);
-})
+social\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -563,9 +557,7 @@ tiktokLiveConnection.on('social', data => {
 Triggered every time a subscriber sends an emote (sticker).
 
 ```javascript
-tiktokLiveConnection.on('emote', data => {
-    console.log('emote received', data);
-})
+emote\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -609,9 +601,7 @@ tiktokLiveConnection.on('emote', data => {
 Triggered every time someone sends a treasure chest.
 
 ```javascript
-tiktokLiveConnection.on('envelope', data => {
-    console.log('envelope received', data);
-})
+envelope\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -655,9 +645,7 @@ tiktokLiveConnection.on('envelope', data => {
 Triggered every time someone asks a new question via the question feature.
 
 ```javascript
-tiktokLiveConnection.on('questionNew', data => {
-    console.log(`${data.uniqueId} asks ${data.questionText}`);
-})
+questionNew\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -700,9 +688,7 @@ tiktokLiveConnection.on('questionNew', data => {
 Triggered every time a battle starts.
 
 ```javascript
-tiktokLiveConnection.on('linkMicBattle', (data) => {
-    console.log(`New Battle: ${data.battleUsers[0].uniqueId} VS ${data.battleUsers[1].uniqueId}`);
-})
+linkMicBattle\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -754,9 +740,7 @@ tiktokLiveConnection.on('linkMicBattle', (data) => {
 Triggered every time a battle participant receives points. Contains the current status of the battle and the army that suported the group.
 
 ```javascript
-tiktokLiveConnection.on('linkMicArmies', (data) => {
-    console.log('linkMicArmies', data);
-})
+linkMicArmies\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -831,9 +815,7 @@ tiktokLiveConnection.on('linkMicArmies', (data) => {
 Triggered when a live intro message appears.
 
 ```javascript
-tiktokLiveConnection.on('liveIntro', (msg) => {
-    console.log(msg);
-})
+liveIntro\0{data}
 ```
 <details><summary>⚡ Show Data Structure</summary><p>
 
@@ -892,9 +874,7 @@ tiktokLiveConnection.on('liveIntro', (msg) => {
 Triggers when a user creates a subscription.
 
 ```javascript
-tiktokLiveConnection.on('subscribe', (data) => {
-    console.log(data.uniqueId, "subscribed!");
-})
+subscribe\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -947,9 +927,7 @@ These events are based on message events.
 Triggers when a user follows the streamer. Based on `social` event.
 
 ```javascript
-tiktokLiveConnection.on('follow', (data) => {
-    console.log(data.uniqueId, "followed!");
-})
+follow\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
@@ -1012,9 +990,7 @@ tiktokLiveConnection.on('follow', (data) => {
 Triggers when a user shares the stream. Based on `social` event.
 
 ```javascript
-tiktokLiveConnection.on('share', (data) => {
-    console.log(data.uniqueId, "shared the stream!");
-})
+share\0{data}
 ```
 
 <details><summary>⚡ Show Data Structure</summary><p>
