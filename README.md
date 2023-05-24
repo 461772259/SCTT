@@ -1,6 +1,6 @@
 ## Getting started
 
-1. open app_V2.exe
+1. open tiktok-connector.exe
 ```
 接口已启动
 ```
